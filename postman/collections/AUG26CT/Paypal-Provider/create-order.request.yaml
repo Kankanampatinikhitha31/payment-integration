@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:8083/v1/orders
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"returnUrl\": \"https://merchantwebsite.com/returnUrl\",\r
+
+    \  \"cancelUrl\": \"https://merchantwebsite.com/cancelUrl\",\r
+
+    \  \"currencyCode\": \"USD\",\r
+
+    \  \"amount\": 1.00\r
+
+    }\r\n"
+auth:
+  type: bearer
+order: 1790741454648

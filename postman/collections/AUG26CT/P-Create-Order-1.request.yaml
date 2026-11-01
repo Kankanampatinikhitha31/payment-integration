@@ -1,0 +1,40 @@
+$kind: http-request
+name: P-Create-Order
+url: https://api-m.sandbox.paypal.com/v2/checkout/orders
+method: POST
+headers:
+  Content-Type: application/json
+  Paypal-Request-Id: 7f3a9c21-8b64-4d2e-a105-9c8f7b6e4322
+body:
+  type: json
+  content: |
+    {
+        "intent": "CAPTURE",
+    	
+    	"payment_source": {
+          "paypal": {
+            "experience_context": {
+              "payment_method_preference": "IMMEDIATE_PAYMENT_REQUIRED",
+    		  "landing_page": "LOGIN",
+    		  "shipping_preference": "NO_SHIPPING",
+    		  "user_action": "PAY_NOW",
+    		  "return_url": "https://example.com/returnUrl",
+              "cancel_url": "https://example.com/cancelUrl"
+            }
+          }
+        },
+    	
+        "purchase_units": [
+          {
+            "amount": {
+              "currency_code": "USD",
+              "value": "1.00"
+            }
+          }
+        ]
+    }
+auth:
+  type: bearer
+  credentials:
+    token: A21AAJaX1QnlhdC1J98VbEmNcSG0QVu7k0YVlVhEzt8yhvPmrulVlljc1c8vBMJRc-B6lP8Aw8fK0i0NQnUSI7TYXq_I-L6xQ
+order: 8000

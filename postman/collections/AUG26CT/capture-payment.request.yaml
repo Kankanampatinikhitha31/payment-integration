@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:8082/v1/payments/b50c4129-e476-4f84-9aa6-107bffe9b871/capture
+method: POST
+body:
+  type: json
+  content: ""
+order: 3513

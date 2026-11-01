@@ -1,0 +1,17 @@
+$kind: http-request
+description: ""
+url: http://localhost:8082/v1/payments
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "userId": "USR1001",
+        "paymentMethod": "APM",
+        "provider": "PAYPAL",
+        "paymentType": "SALE",
+        "amount": 1.50,
+        "currency": "USD",
+        "merchantTransactionReference": "MERCH-TXN-10001"
+    }
+order: 5000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: " http://localhost:8083/v1/orders/333/capture"
+method: POST
+order: 3104332291706985

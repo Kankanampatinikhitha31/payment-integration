@@ -1,0 +1,6 @@
+$kind: http-request
+name: capture-payment
+description: ""
+url: http://localhost:8082/v1/payments/b3c2606e-2c21-40f6-b19a-225ff4fca090/capture
+method: POST
+order: 7000
